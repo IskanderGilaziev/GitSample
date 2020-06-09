@@ -1,0 +1,275 @@
+/*=====================================================*/
+/*Fonts*/
+@font-face {
+    src: url('../fonts/NunitoSans-Regular.ttf');
+    font-family: "Nunito Sans";
+}
+
+@font-face {
+    src: url('../fonts/YesevaOne-Regular.ttf');
+    font-family: "YesevaOne";
+}
+/*=====================================================*/
+/*Tags*/
+body {
+    margin: 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+span {
+    color: #E3B873;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+h1 {
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+/*p {*/
+/*    font-size: 22px;*/
+/*    line-height: 36px;*/
+/*    color: #FFFFFF;*/
+/*}*/
+/*=====================================================*/
+/*Header*/
+
+.button {
+    background: #E3B873;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    outline: none;
+    padding: 13px 33px;
+    cursor: pointer;
+    border: 2px solid #E3B873;
+    transition: all .218s ease 0s;
+}
+
+/*Подцветка кнопки при наведении*/
+.button:hover {
+    color: white;
+    border: 1px solid #ffa812;
+    background: #ffa812 linear-gradient(#ffa812, #d89b3a);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+/*Эффект нажатия кнопки*/
+.button:active {
+    color: white;
+    border: 1px solid #f1bb65;
+    background: #deb887 linear-gradient(#d89b3a, rgb(224,224,224));
+    box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+
+.header {
+    font-size: 11px;
+    line-height: 15px;
+    position: sticky;
+    background: black;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.header-content {
+    height: 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navigation {
+    list-style: none;
+    display: flex;
+}
+
+.header-navigation__item {
+    margin-right: 47px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-navigation__item:hover, a:hover {
+    color: #E3B873;
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+.phone {
+    text-align: right;
+    text-decoration-line: underline;
+}
+
+/*=====================================================*/
+/*section welcome*/
+
+.welcome {
+    background-image: url("../images/room.jpg");
+    background-size: cover;
+    height: 707px;
+    position: relative;
+}
+
+.welcome-content {
+    display: block;
+    padding-left: 134px;
+    padding-top: 194px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-title {
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 676px;
+    height: 105px;
+}
+
+.welcome-dark-img {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.welcome-text {
+    margin-top: 0;
+    margin-bottom: 41px;
+    font-size: 22px;
+    line-height: 36px;
+    color: #FFFFFF;
+    width: 504px;
+    height: 89px;
+}
+
+.welcome-submit {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #FFFFFF;
+}
+
+/*=====================================================*/
+/*section slider*/
+
+.slider {
+    background-color: #131313;
+    background-size: cover;
+    position: relative;
+    height: 707px;
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slider-navigation {
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    padding-top: 107px;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-basis: auto;
+}
+
+.slider-navigation__item {
+   padding-right: 60px;
+   align-self: center;
+}
+
+/*TODO!!!!!!!!!!!!!!! найти повторы и объединить*/
+.slider-navigation__item:hover {
+    color: #E3B873;
+}
+.slider-navigation__item:hover > .underline {
+    color: #E3B873;
+    visibility: visible;
+}
+
+.slider-image {
+    padding-top: 32px;
+}
+
+.underline {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    visibility: hidden;
+}
+
+.slider-info {
+    /*display: flex;*/
+
+}
+
+.slider-project {
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+.slider-project-info {
+    font-size: 14px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-top: 34px;
+}
+
+/*TODO!! остановился здесь*/
+.slider-room-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.param-name {
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+.param-value {
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 21px;
+    padding-top: 9px;
+}
