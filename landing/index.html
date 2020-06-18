@@ -22,7 +22,7 @@
             </ul>
         </nav>
 <!--        <span class="phone"><a href="tel:+7 (928) 768-32-39">+7 (928) 768-32-39</a></span>-->
-        <button class="button">Request a call</button>
+        <button class="button" type="button">Request a call</button>
     </div>
 </header>
 <main>
@@ -31,8 +31,8 @@
             <h1 class="welcome-title">Turnkey Repair in the <br> city of <span>Rostov-on-Don</span></h1>
             <p class="welcome-text">Get ready-made turnkey repairs on time <br> with work time saving up
                 to 45 days and 20% from <br> cost of materials due to the organization of work</p>
-            <button class="button calculate-button">CALCULATE THE COST</button>
-            <button class="button welcome-submit">SUBMIT YOUR APPLICATION</button>
+            <button class="button calculate-submit" type="button">CALCULATE THE COST</button>
+            <button class="button welcome-submit" type="button">SUBMIT YOUR APPLICATION</button>
         </div>
         <div class="welcome-dark-img"></div>
     </section>
@@ -49,23 +49,35 @@
                     <p class="slider-project-info">Only a small part of the work performed by our company is presented <br> on the site.
                         For 14 years on in the construction <br> market we have made happy more than 1000 families </p>
                     <div class="slider-room-info">
-                        <div class="city">
+                        <div class="slider-room-info__item">
                             <h3 class="param-name">city:</h3>
-                            <span class="param-value">Rostov-on-Don LCD admiral</span>
+                            <span class="param-value">Rostov-on-Don <br> LCD admiral</span>
                         </div>
-                        <div class="repair-time">
-                            <h3 class="param-name">Repair time:</h3>
-                            <span class="param-value">3.5 months</span>
-                        </div>
-                        <div class="repair-cost">
-                            <h3 class="param-name">Repair Coast:</h3>
-                            <span class="param-value">Upon request</span>
-                        </div>
-                        <div class="slider-apartment">
+                        <div class="slider-room-info__item">
                             <h3 class="param-name">apartment area:</h3>
                             <span class="param-value">81 m<sup>2</sup></span>
                         </div>
+                        <div class="slider-room-info__item">
+                            <h3 class="param-name">Repair time:</h3>
+                            <span class="param-value">3.5 months</span>
+                        </div>
+                        <div class="slider-room-info__item">
+                            <h3 class="param-name">Repair Coast:</h3>
+                            <span class="param-value">Upon request</span>
+                        </div>
+
                     </div>
+                    <div class="slider-radio">
+                        <div class="arrow arrow-left arrow-indent-left"></div>
+                        <input type="radio" id="one" checked="checked">
+                        <label class="radio" for="one"></label>
+                        <input type="radio" id="two">
+                        <label class="radio" for="two"></label>
+                        <input type="radio" id="three">
+                        <label class="radio" for="three"></label>
+                        <div class="arrow arrow-right arrow-indent-right"></div>
+                    </div>
+
                 </div>
                 <div class="slider-image">
                     <img src="../landing/images/chairs.png" alt="chairs" width="679" height="482">
@@ -73,7 +85,49 @@
             </div>
         </div>
     </section>
-    <section></section>
+    <section class="online-control">
+        <div class="container online-control-container">
+            <h3 class="online-control-title">online control</h3>
+            <div class="online-camera">
+                <div class="camera-line"></div>
+                <img src="./images/camera.png" alt="camera">
+                <div class="camera-line"></div>
+            </div>
+            <div class="camera-video">
+                <iframe width="817" height="434" src="https://www.youtube.com/embed/yyCYb7Ccci4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="camera-separator-line"></div>
+            </div>
+
+            <p class="camera-text">At each facility, a camera is installed that broadcasts the progress of work on the <br> clock.
+                At any time, you can go to our website and monitor the progress of work in <br> your apartment.
+                You can watch the live broadcast from one of our facilities! <br> Leave a request below and you
+                will receive a link to the broadcast.</p>
+            <div class="wrap-form">
+                <form action="/goToServer" method="post">
+                    <div class="online-form-info">
+                        <div class="wrap-input">
+                            <label class="label-info" for="name">Name </label>
+                            <input class="input-text" type="text" id="name" placeholder="What is your name:">
+                        </div>
+                        <div class="wrap-input">
+                            <label class="label-info" for="tel">Phone</label>
+                            <input class="input-text" type="tel" id="tel" placeholder="Your phone number:">
+                        </div>
+                        <button class="button submit-info" type="button">Submit</button>
+                    </div>
+                    <div class="wrap-checkbox">
+                        <input class="agreement-checkbox" id="checkbox" type="checkbox" checked="checked" name="agreement" value="yes">
+                        <label class="checkbox" for="checkbox">I agree to the processing of personal data
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
     <section></section>
 </main>
 

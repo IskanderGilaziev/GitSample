@@ -36,11 +36,7 @@ h1 {
     line-height: 53px;
     text-transform: uppercase;
 }
-/*p {*/
-/*    font-size: 22px;*/
-/*    line-height: 36px;*/
-/*    color: #FFFFFF;*/
-/*}*/
+
 /*=====================================================*/
 /*Header*/
 
@@ -49,6 +45,7 @@ h1 {
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     color: white;
+    font-family: "Nunito Sans", Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-style: italic;
@@ -170,11 +167,14 @@ h1 {
 }
 
 .welcome-submit {
+    margin-left: 20px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF;
 }
-
+welcome-submit, .calculate-submit {
+    padding: 13px 42px;
+}
 /*=====================================================*/
 /*section slider*/
 
@@ -182,7 +182,8 @@ h1 {
     background-color: #131313;
     background-size: cover;
     position: relative;
-    height: 707px;
+    /*height: 707px;*/
+    height: 1074px;
 }
 
 .slider-content {
@@ -232,9 +233,9 @@ h1 {
     visibility: hidden;
 }
 
+/*TODO убрать или подумать над назначением*/
 .slider-info {
     /*display: flex;*/
-
 }
 
 .slider-project {
@@ -252,14 +253,19 @@ h1 {
     padding-top: 34px;
 }
 
-/*TODO!! остановился здесь*/
 .slider-room-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
 }
+
+.slider-room-info__item {
+    width: 50%;
+    height: 50%;
+}
+
 .param-name {
     font-family: "YesevaOne", Arial, sans-serif;
     font-size: 18px;
@@ -273,3 +279,270 @@ h1 {
     line-height: 21px;
     padding-top: 9px;
 }
+
+.slider-radio {
+    padding-top: 55px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+}
+input {
+    display: none;
+}
+
+input:checked + .radio, .radio:hover {
+    background: white;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.radio{
+    cursor: pointer;
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    border-radius: 100%;
+    transition: all .15s ease;
+}
+
+.radio:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: .5;
+}
+
+.radio:active {
+    background: transparent;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.3)
+}
+
+.arrow {
+    cursor: pointer;
+    position: relative;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    display: flex;
+    width: 40px;
+    height: 1px;
+    top: 14px;
+}
+.arrow:after, .arrow:before  {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+.arrow:after {
+    top: -2px;
+}
+
+.arrow:before {
+    top: 2px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+
+.arrow-right:after, .arrow-right:before {
+    right: 0;
+}
+.arrow-right:after {
+    transform: rotate(25deg);
+}
+
+.arrow-right:before {
+    transform: rotate(-25deg);
+}
+
+.arrow-indent-right {
+    margin-left: 30px;
+}
+
+.arrow-left:after, .arrow-left:before {
+    left: 0;
+}
+.arrow-left:after {
+    transform: rotate(155deg);
+}
+.arrow-left:before {
+    transform: rotate(-155deg);
+}
+
+.arrow-indent-left {
+    margin-right: 30px;
+}
+
+.arrow:hover {
+    animation: arrow 1s linear infinite;
+}
+@keyframes arrow {
+    0% {
+        left:0;
+    }
+    50% {
+        left:5px;
+    }
+    100% {
+        left:0;
+    }
+}
+/*=====================================================*/
+/*section online-control*/
+
+.online-control {
+    height: 707px;
+    position: relative;
+}
+/*TODO добавть наложение на предыдущую секцию*/
+.online-control-container {
+    z-index: 1;
+    margin-top: -298px;
+}
+
+.online-control-title {
+    font-family: "Yeseva One", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 13px;
+    color: #FFFFFF;
+/*   TODO вернуть цвет*/
+}
+
+.online-camera {
+    margin-bottom: 31px;
+    display: flex;
+    justify-content: center;
+}
+
+.camera-line {
+    position: relative;
+    top: 15px;
+    background: #E3B873;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    display: flex;
+    width: 32px;
+    height: 1px;
+    margin: 0 10px 0;
+}
+
+.camera-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-separator-line {
+    margin-top: 63px;
+    width: 55px;
+    height: 1px;
+    position: center;
+    background: #E3B873;
+}
+
+.camera-text {
+    margin-top: 35px;
+    font-size: 18px;
+    line-height: 37px;
+    text-align: center;
+    color: #363636;
+}
+
+.wrap-form {
+    margin: 92px 336px 33px;
+}
+
+.online-form-info{
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 0;
+    border: none;
+    outline: none;
+    overflow: visible;
+    touch-action: manipulation;
+}
+
+.wrap-input {
+    border-bottom: 2px solid #d9d9d9;
+    position: relative;
+    margin-right: 58px;
+}
+
+.label-info {
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(54, 54, 54, 0.5);
+    display: block;
+    pointer-events: none;
+}
+
+.input-text {
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+    display: block;
+    width: 231px;
+}
+
+.submit-info {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 27px;
+    width: 250px;
+    padding: 13px 70px;
+}
+
+.wrap-checkbox {
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+}
+
+.agreement-checkbox {
+    font-size: 14px;
+    line-height: 23px;
+    color: #181818;
+}
+
+.agreement-checkbox+label {
+    display: flex;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.agreement-checkbox+label::before {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.agreement-checkbox:checked+label::before {
+    border-color: #E3B873;
+    background-color: #E3B873;
+}
+
