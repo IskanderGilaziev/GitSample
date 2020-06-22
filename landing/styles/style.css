@@ -172,7 +172,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF;
 }
-welcome-submit, .calculate-submit {
+.welcome-submit, .calculate-submit {
     padding: 13px 42px;
 }
 /*=====================================================*/
@@ -399,7 +399,7 @@ input:checked + .radio, .radio:hover {
 /*section online-control*/
 
 .online-control {
-    height: 707px;
+    height: 1072px;
     position: relative;
 }
 /*TODO добавть наложение на предыдущую секцию*/
@@ -417,16 +417,15 @@ input:checked + .radio, .radio:hover {
     margin: 0;
     padding-bottom: 13px;
     color: #FFFFFF;
-/*   TODO вернуть цвет*/
 }
 
-.online-camera {
+.svg-image {
     margin-bottom: 31px;
     display: flex;
     justify-content: center;
 }
 
-.camera-line {
+.separator-line {
     position: relative;
     top: 15px;
     background: #E3B873;
@@ -509,6 +508,7 @@ input {
 
 .wrap-checkbox {
     margin-top: 33px;
+    /*margin-bottom: 148px;*/
     display: flex;
     justify-content: center;
 }
@@ -546,3 +546,150 @@ input {
     background-color: #E3B873;
 }
 
+/*=====================================================*/
+/*section type-repair*/
+
+.type-repair {
+    height: 1680px;
+    position: relative;
+}
+
+.type-repair-container {
+}
+
+.type-repair-title {
+    font-family: "Yeseva One", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+
+}.wrap-repair-container {
+     display: flex;
+     justify-content: center;
+     width: 1236px;
+     height: 608px;
+     margin-left: 103px;
+ }
+
+ .repair-info {
+     width: 330px;
+     height: 286px;
+     background: #FFFFFF;
+     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     margin: 294px 31px 0;
+     position: absolute;
+     top: 0;
+ }
+
+ .wrap-repair-info {
+     position: relative;
+     margin-right: 30px;
+ }
+
+ .repair-work-name {
+     font-family: "Yeseva One", Arial, sans-serif;
+     font-size: 18px;
+     line-height: 25px;
+     color: #363636;
+     margin: 25px 0 13px 34px;
+ }
+
+ .repair-options {
+     font-size: 13px;
+     line-height: 27px;
+     color: #959595;
+     margin: 0;
+     padding-left: 50px;
+ }
+ .repair-coast {
+     width: 228px;
+     height: 54px;
+     background: #E3B873;
+     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+     position: absolute;
+     font-family: "Yeseva One", Arial, sans-serif;
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 18px;
+     line-height: 25px;
+     color: #FFFFFF;
+     bottom: 0;
+     margin: 0 31px 0;
+ }
+
+ .wrap-repair-clause {
+     margin-top: 124px;
+     display: flex;
+ }
+
+ .repair-clause-info {
+     width: 470px;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     margin-left: auto;
+ }
+
+ .repair-clause-container {
+     width: 703px;
+     height: 645px;
+     background-image: url("../images/home_facade.png");
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ .repair-clause-info__item {
+     position: relative;
+     background: #E3B873;
+     border: 8px solid #FFFFFF;
+     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.15);
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+
+     font-size: 18px;
+     line-height: 25px;
+     text-align: center;
+     color: #FFFFFF;
+     font-family: "Yeseva One", Arial, sans-serif;
+     padding: 10px;
+ }
+
+ .repair-clause-text {
+     margin: 0;
+     padding: 17px;
+     font-size: 14px;
+     line-height: 19px;
+     color: #363636;
+ }
+
+ .repair-form {
+     width: 506px;
+     height: 509px;
+     margin-left: 131px;
+     /*background-color: #131313;*/
+     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+ }
+.repair-form-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 58px;
+
+}
+.wrap-repair-input {
+    border-bottom: 2px solid #d9d9d9;
+    position: relative;
+}
+ .repair-checkbox {
+     color: #FFFFFF;
+ }
