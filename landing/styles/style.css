@@ -54,7 +54,7 @@ h1 {
     outline: none;
     padding: 13px 33px;
     cursor: pointer;
-    border: 2px solid #E3B873;
+    /*border: 2px solid #E3B873;*/
     transition: all .218s ease 0s;
 }
 
@@ -149,7 +149,7 @@ h1 {
     height: 105px;
 }
 
-.welcome-dark-img {
+.dark-theme {
     content: '';
     position: absolute;
     left: 0;
@@ -213,30 +213,21 @@ h1 {
     flex-basis: auto;
 }
 
+/*TODO подумать над реализацией подчеркивания*/
 .slider-navigation__item {
     padding-right: 60px;
     align-self: center;
+    text-decoration: none;
 }
 
 /*TODO!!!!!!!!!!!!!!! найти повторы и объединить*/
 .slider-navigation__item:hover {
     color: #E3B873;
-}
-
-.slider-navigation__item:hover > .underline {
-    color: #E3B873;
-    visibility: visible;
+    text-decoration: underline;
 }
 
 .slider-image {
     padding-top: 32px;
-}
-
-.underline {
-    position: relative;
-    border-width: 1px;
-    border-style: solid;
-    visibility: hidden;
 }
 
 /*TODO убрать или подумать над назначением*/
@@ -764,8 +755,7 @@ input {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /*margin: auto;*/
-    margin-right: 132px;
+    right: 0;
 }
 
 .svg-image-pig__item {
@@ -782,23 +772,212 @@ input {
     padding: 20px;
 }
 
-.svg-image-pig__item:before {
-    content: url("../images/dollar.svg");
-    position: absolute;
-    margin: 29px 0 0 0;
-    padding: 0 0 0 33px;
-}
-
-.svg-image-pig__item:after {
-    content: url("../images/funny_eye.svg");
-    position: absolute;
-    margin: 20px 0 0 0;
-    padding: 0 0 0 48px;
-}
-
 .money-pig-info {
     font-size: 18px;
     line-height: 26px;
     text-shadow: 0 3px 10px rgba(227, 184, 115, 0.15);
     padding-left: 25px;
+    width: 344px;
+    height: 47px;
+    margin-right: 135px;
+}
+/*=====================================================*/
+/*section wildest-fantasy*/
+
+.wildest-fantasies {
+    height: 864px;
+    /*height: 1018px;*/
+    position: relative;
+    background-image: url("../images/wildest_interior.png");
+    background-size: cover;
+    margin-top: 113px;
+
+}
+
+.wildest-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.wildest-fantasies-description {
+    padding: 120px 0 0 55px;
+    display: block;
+}
+/*TODO повтор slider-project*/
+.wildest-header {
+    margin: 0;
+    padding-left: 40px;
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.wildest-info {
+    list-style: none;
+}
+
+.wildest-info__item {
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 38px;
+    cursor: pointer;
+    padding-bottom: 20px;
+
+}
+
+.wildest-info__item:hover {
+    color: #E3B873;
+    text-decoration: underline;
+}
+
+.wildest-image-container {
+    position: absolute;
+    display: flex;
+    right: 102px;
+
+}
+
+.wildest-image__item {
+    margin-bottom: 40px;
+}
+
+.wildest-image-block_1{
+    margin-top: -41px;
+}
+
+.wildest-image-block_2 {
+    margin-top: -112px;
+}
+
+.wildest-image-block_1,
+.wildest-image-block_2{
+    width: 354px;
+    margin-left: 43px;
+}
+/*=====================================================*/
+/*section clients-comments*/
+
+.clients-comments-section {
+    position: relative;
+    height: 1110px;
+    background-image: url("../images/city_builds.svg");
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+.clients-container {
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*TODO копия camera-text */
+.clients-text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+}
+
+.wrap-client-comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-client-comment {
+    background: #FFFFFF;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
+    margin-right: 54px;
+    margin-top: 39px;
+    font-size: 13px;
+    line-height: 180%;
+    color: #959595;
+}
+
+.client-photo {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.wrap-client-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.client-name {
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+    width: 200px;
+    height: 42px;
+    padding-left: 25px;
+}
+
+.client-comment {
+    width: 325px;
+    height: 216px;
+    margin: 12px 32px 90px 20px;
+}
+
+.client-order-coast {
+    width: 294px;
+    height: 54px;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    margin-top: -27px;
+}
+
+/*.area:before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background-image: url("../images/coordinate-system.svg");*/
+/*    padding: 50px;*/
+/*}*/
+.client-order-area, .client-order-days {
+    margin: 0;
+    position: relative;
+    font-family: "YesevaOne", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.client-order-area:before {
+    content: url("../images/coordinate-system.svg");
+    margin: 0 15px 0 -15px;
+}
+
+.client-order-days:before {
+    content: url("../images/calendar.svg");
+    margin: 0 15px 0 -15px;
+}
+
+.client-order-coast:after {
+    border-left: 0.75px solid #FFFFFF;
+    content: "";
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    margin: 0 -20px 0;
 }
