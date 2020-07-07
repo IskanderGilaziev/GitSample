@@ -169,15 +169,18 @@ h1 {
     height: 89px;
 }
 
-.welcome-submit {
+.welcome-submit-large, .welcome-submit-small {
     margin-left: 20px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF;
 }
 
-.welcome-submit, .calculate-submit {
+.welcome-submit-large, .calculate-submit , .welcome-submit-small{
     padding: 13px 42px;
+}
+.welcome-submit-small {
+    display: none;
 }
 
 /*=====================================================*/
@@ -1081,4 +1084,84 @@ footer {
     background: black;
     font-size: 11px;
     line-height: 15px;
+}
+/*=====================================================*/
+/*section mobile screen*/
+@media screen and (max-width: 375px){
+    /*=====================================================*/
+    /*Header*/
+    .header-navigation__item {
+        display: none;
+    }
+
+    .header-navigation__item:last-child {
+        display: flex;
+    }
+
+    #call_button {
+        display: none;
+    }
+
+    .header-content {
+        height: 57px;
+        justify-content: space-around;
+    }
+    .logo{
+        margin-left: 18px;
+    }
+
+    .container {
+        max-width: 375px;
+    }
+    /*=====================================================*/
+    /*section welcome*/
+
+    .welcome {
+        background-position: center;
+        height: 476px;
+        background-size: auto;
+    }
+
+    .welcome-content {
+        padding: 85px 18px 0;
+        width: 339px;
+    }
+
+    .welcome-title {
+        font-size: 23px;
+        line-height: 132.83%;
+        margin-bottom: 16px;
+        height: 60px;
+    }
+    /*todo text krivoy*/
+    .welcome-text {
+        font-size: 14px;
+        line-height: 135.84%;
+        height: 94px;
+        margin-bottom: 32px;
+        width: 100%;
+    }
+
+    .welcome-submit-small, .calculate-submit {
+        /*padding: 13px 80px;*/
+        width: 100%;
+    }
+    .welcome-submit-large {
+        display: none;
+    }
+
+    .welcome-submit-small {
+        display: block;
+        margin: 0;
+    }
+
+    .calculate-submit {
+        margin-bottom: 26px;
+    }
+    /*.welcome-submit:before {*/
+    /*    !*content: "APPLICATION";*!*/
+    /*}*/
+
+
+
 }
