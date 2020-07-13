@@ -193,7 +193,7 @@ h1 {
     height: 1074px;
 }
 
-.slider-content {
+.wrap-slider-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -228,11 +228,15 @@ h1 {
 }
 
 .slider-image {
-    padding-top: 32px;
+    margin-top: 45px;
+    width: 679px;
+    height: 482px;
+    background-image: url("../images/release_wildest/chairs.png");
 }
 
 
-.slider-project {
+
+.slider-project-title {
     font-family: "YesevaOne", Arial, sans-serif;
     font-size: 27px;
     line-height: 37px;
@@ -245,7 +249,10 @@ h1 {
     font-size: 14px;
     line-height: 27px;
     color: #FFFFFF;
-    padding-top: 34px;
+    width: 442px;
+    height: 86px;
+    margin-bottom: 42px;
+    margin-top: 34px;
 }
 
 .slider-room-info {
@@ -410,6 +417,8 @@ input:checked + .radio, .radio:hover {
 .online-control-container {
     z-index: 1;
     margin-top: -298px;
+    display: flex;
+    flex-direction: column;
 }
 
 .online-control-title {
@@ -448,12 +457,15 @@ input:checked + .radio, .radio:hover {
     justify-content: center;
     align-items: center;
 }
+iframe {
+    width: 817px;
+    height: 434px;
+}
 
 .camera-separator-line {
     margin-top: 63px;
     width: 55px;
     height: 1px;
-    position: center;
     background: #E3B873;
 }
 
@@ -463,6 +475,9 @@ input:checked + .radio, .radio:hover {
     line-height: 37px;
     text-align: center;
     color: #363636;
+    width: 681px;
+    height: 131px;
+    align-self: center;
 }
 
 .wrap-form {
@@ -509,7 +524,6 @@ input {
     font-style: normal;
     font-size: 13px;
     line-height: 27px;
-    width: 250px;
     padding: 13px 70px;
 }
 
@@ -1143,7 +1157,6 @@ footer {
     }
 
     .welcome-submit-small, .calculate-submit {
-        /*padding: 13px 80px;*/
         width: 100%;
     }
     .welcome-submit-large {
@@ -1158,10 +1171,195 @@ footer {
     .calculate-submit {
         margin-bottom: 26px;
     }
-    /*.welcome-submit:before {*/
-    /*    !*content: "APPLICATION";*!*/
-    /*}*/
+    /*=====================================================*/
+    /*section slider*/
+
+    .slider {
+        height: 727px;
+    }
+    .slider-navigation {
+        display: none;
+    }
+    .wrap-slider-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .slider-project-title {
+        font-size: 22px;
+        line-height: 138.6%;
+        /* or 30px */
+        text-align: center;
+        margin: 36px 61px 22px;
+
+        order: 1;
+    }
+
+    .slider-project-info {
+        font-size: 11px;
+        line-height: 158.48%;
+        /* or 17px */
+        text-align: center;
+        width: 311px;
+        height: 86px;
+        margin: 0 32px 36px;
+        padding: 0;
+        order: 1;
+    }
+
+    .slider-room-info {
+        margin: 0 18px 0;
+        order: 3;
+    }
+    .slider-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .slider-image {
+        display: none;
+    }
+    .slider-radio {
+        background-image: url("../images/cabinet.png");
+        width: 340px;
+        height: 241px;
+        margin: 0 18px 36px;
+        padding-top: 25%;
+        order: 2;
+    }
+
+    .arrow {
+        background: #E3B873;
+        box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0 14px 0;
+    }
+
+    .arrow:after, .arrow:before {
+        margin-top: 20px;
+    }
+
+
+    .arrow-right:after, .arrow-right:before {
+        right: 15px;
+    }
+    .arrow-left:after, .arrow-left:before {
+        left: 15px;
+    }
+    .arrow-right:after {
+        transform: rotate(35deg);
+    }
+
+    .arrow-right:before {
+        transform: rotate(-35deg);
+    }
+    .arrow-left:after {
+        transform: rotate(145deg);
+    }
+
+    .arrow-left:before {
+        transform: rotate(-145deg);
+    }
+
+    .arrow-indent-right {
+        /*left: 79%;*/
+        margin-left: 65%;
+    }
+
+    .slider-radio label {
+        display: none;
+    }
+
+    .param-name {
+        font-size: 14px;
+        line-height: 138.6%;
+    }
+
+    .param-value {
+        font-size: 11px;
+        line-height: 135.84%;
+        padding-top: 12px;
+    }
+
+    /*=====================================================*/
+    /*section online-control*/
+    .online-control {
+        /*todo!! подумать */
+        height: 750px;
+    }
+
+    .online-control-container {
+        margin: 0;
+        background-color: #131313;
+    }
+
+    .online-control-title {
+        font-size: 22px;
+        line-height: 138.6%;
+    }
+
+    iframe {
+        width: 340px;
+        height: 207px;
+    }
+
+    .camera-separator-line {
+        margin: 28px 0 22px;
+    }
+
+    .camera-text {
+        font-size: 11px;
+        line-height: 169.8%;
+        /* or 19px */
+        text-align: center;
+        color: #FFFFFF;
+        width: 340px;
+        height: 107px;
+        margin: 0 18px 0;
+    }
+
+    .wrap-form {
+        margin: 61px 18px 0;
+    }
+
+    .wrap-input {
+        margin: 0;
+    }
+
+    .wrap-input:first-child {
+        margin-bottom: 63px;
+    }
+
+    .label-info {
+        color: rgba(255, 255, 255, 0.5);;
+    }
+
+    .input-text {
+        line-height: 138.72%;
+        width: 100%;
+    }
+
+    .input-text::placeholder {
+        color: #FFFFFF;
+    }
+
+    .checkbox {
+        color: #FFFFFF;
+    }
+
+    .online-form-info {
+        flex-direction: column;
+    }
+
+    .submit-info {
+    }
 
 
 
+
+    .type-repair, .wildest-fantasies,
+    .clients-comments-section, .shop-position, footer {
+        display: none;
+    }
 }
