@@ -165,22 +165,22 @@ h1 {
     font-size: 22px;
     line-height: 36px;
     color: #FFFFFF;
-    width: 504px;
+    width: 490px;
     height: 89px;
 }
 
-.welcome-submit-large, .welcome-submit-small {
+.welcome-submit {
     margin-left: 20px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF;
 }
-
-.welcome-submit-large, .calculate-submit , .welcome-submit-small{
-    padding: 13px 42px;
+.welcome-submit:before {
+    content: "SUBMIT YOUR APPLICATION";
 }
-.welcome-submit-small {
-    display: none;
+
+.welcome-submit, .calculate-submit {
+    padding: 13px 42px;
 }
 
 /*=====================================================*/
@@ -611,6 +611,18 @@ input {
     margin-right: 30px;
 }
 
+.wrap-repair-info:nth-of-type(1) > .repair-room-img {
+    content: url("../images/repair_type/empty_room.jpg");
+}
+
+.wrap-repair-info:nth-of-type(2) > .repair-room-img {
+    content: url("../images/repair_type/hall.jpg");
+}
+
+.wrap-repair-info:nth-of-type(3) > .repair-room-img {
+    content: url("../images/repair_type/kitchen.jpg");
+}
+
 .repair-work-name {
     font-family: "Yeseva One", Arial, sans-serif;
     font-size: 18px;
@@ -845,7 +857,9 @@ input {
     position: absolute;
     display: flex;
     right: 102px;
-
+}
+.wildest-image-container > .slider-radio {
+    display: none;
 }
 
 .wildest-image__item {
@@ -1099,9 +1113,10 @@ footer {
     font-size: 11px;
     line-height: 15px;
 }
+
 /*=====================================================*/
 /*section mobile screen*/
-@media screen and (max-width: 375px){
+@media screen and (min-width: 375px) and (max-width: 425px){
     /*=====================================================*/
     /*Header*/
     .header-navigation__item {
@@ -1125,7 +1140,8 @@ footer {
     }
 
     .container {
-        max-width: 375px;
+        max-width: inherit;
+        min-width: inherit;
     }
     /*=====================================================*/
     /*section welcome*/
@@ -1137,35 +1153,33 @@ footer {
     }
 
     .welcome-content {
-        padding: 85px 18px 0;
+        padding: 85px 0 0;
         width: 339px;
     }
 
     .welcome-title {
         font-size: 23px;
         line-height: 132.83%;
-        margin-bottom: 16px;
+        margin: 0 calc(10% - 18px) 16px;
         height: 60px;
     }
-    /*todo text krivoy*/
+
     .welcome-text {
         font-size: 14px;
         line-height: 135.84%;
         height: 94px;
-        margin-bottom: 32px;
-        width: 100%;
+        margin: 0 calc(10% - 18px) 32px;
+        width: inherit;
+        white-space: nowrap;
     }
 
-    .welcome-submit-small, .calculate-submit {
-        width: 100%;
-    }
-    .welcome-submit-large {
-        display: none;
+    .welcome-submit:before {
+        content: "APPLICATION";
     }
 
-    .welcome-submit-small {
-        display: block;
-        margin: 0;
+    .calculate-submit, .welcome-submit {
+        width: 90%;
+        margin: 0 18px 0 18px;
     }
 
     .calculate-submit {
@@ -1202,13 +1216,13 @@ footer {
         text-align: center;
         width: 311px;
         height: 86px;
-        margin: 0 32px 36px;
+        margin: 0 calc(20% - 32px) 36px;
         padding: 0;
         order: 1;
     }
 
     .slider-room-info {
-        margin: 0 18px 0;
+        margin: 0 calc(10% - 18px) 0;
         order: 3;
     }
     .slider-content {
@@ -1222,7 +1236,7 @@ footer {
         background-image: url("../images/cabinet.png");
         width: 340px;
         height: 241px;
-        margin: 0 18px 36px;
+        margin: 0 calc(10% - 18px) 36px;
         padding-top: 25%;
         order: 2;
     }
@@ -1263,7 +1277,6 @@ footer {
     }
 
     .arrow-indent-right {
-        /*left: 79%;*/
         margin-left: 65%;
     }
 
@@ -1285,8 +1298,8 @@ footer {
     /*=====================================================*/
     /*section online-control*/
     .online-control {
-        /*todo!! подумать */
         height: 750px;
+        margin-bottom: 100px;
     }
 
     .online-control-container {
@@ -1317,6 +1330,7 @@ footer {
         width: 340px;
         height: 107px;
         margin: 0 18px 0;
+        white-space: nowrap;
     }
 
     .wrap-form {
@@ -1324,7 +1338,7 @@ footer {
     }
 
     .wrap-input {
-        margin: 0;
+        width: 100%;
     }
 
     .wrap-input:first-child {
@@ -1350,17 +1364,180 @@ footer {
 
     .online-form-info {
         flex-direction: column;
+        position: relative;
     }
 
+    .wrap-checkbox {
+        margin-top: 27px;
+        margin-bottom: 80px;
+    }
     .submit-info {
-    /*    */
+        position: absolute;
+        bottom: 0;
+        margin-bottom: -150px;
+        width: 100%;
+    }
+
+    /*=====================================================*/
+    /*section type-repair*/
+    .type-repair {
+        height: 2030px;
+    }
+
+    .wrap-repair-clause, .wrap-pig {
+        display: none;
+    }
+
+    .type-repair-title {
+        font-size: 22px;
+        line-height: 138.6%;
+    }
+
+    .wrap-repair-container {
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .wrap-repair-info {
+        padding-bottom: 178px;
+    }
+    .wrap-repair-info:nth-of-type(1) > .repair-room-img {
+        content: url("../images/mobile_img/empty_room_mobile.png");
+    }
+
+    .wrap-repair-info:nth-of-type(2) > .repair-room-img {
+        content: url("../images/mobile_img/hall_mobile.png");
+    }
+
+    .wrap-repair-info:nth-of-type(3) > .repair-room-img {
+        content: url("../images/mobile_img/kitchen_mobile.png");
+    }
+    .repair-room-img {
+        margin: 0 18px 0;
+    }
+    .repair-info {
+        margin: 223px 0 0 0;
+        width: 270px;
+        height: 241px;
+    }
+    .repair-work-name {
+        font-size: 15px;
+        line-height: 138.6%;
+    }
+    .repair-options {
+        line-height: 169.8%;
+        /* or 22px */
+    }
+
+    .repair-room-img {
+        width: 340px;
+        height: 365px;
+    }
+
+    .repair-coast {
+        margin: 0 0 45px 18px;
+    }
+
+    /*=====================================================*/
+    /*section wildest-fantasies*/
+    .wildest-fantasies {
+        background-image: none;
+        margin: -400px 0 100px 0;
+        height: 445px;
+        z-index: 2;
+    }
+    .wildest-fantasies > .dark-theme {
+        display: none;
+    }
+    .wildest-header {
+        font-size: 22px;
+        line-height: 138.6%;
+        /* or 30px */
+        text-align: center;
+        padding: 0;
+        margin: 0 18px 0;
+        display: flex;
+    }
+
+    .wildest-info, .wildest-image-block_1, .wildest-image-block_2{
+        display: none;
+    }
+    .wildest-container {
+        flex-direction: column;
+    }
+    .wildest-image-container {
+        right: 0;
+        margin: 24px 0 0 18px;
+        position: relative;
+    }
+    .wildest-image-container > .slider-radio {
+        display: flex;
+        background-image: url("../images/mobile_img/wildest_room_mobile.png");
+        margin: 0;
     }
 
 
+    /*=====================================================*/
+    /*section shop-position*/
+    .shop-position {
+        /*margin-top: 250px;*/
+        background-image: none;
+        background-color: black;
+        height: 750px;
+    }
 
+    .wrap-question-form {
+        margin-top: 175px;
+        margin-bottom: 100px;
+        width: inherit;
+    }
+    .question-container {
+        background-color: #131313;
+    }
+    .question-form {
+        width: inherit;
+        margin: 52px 18px 0 18px;
+    }
+    .name-phone-container > .wrap-input:first-child{
+        margin-bottom: 49px;
+    }
 
-    .type-repair, .wildest-fantasies,
-    .clients-comments-section, .shop-position, footer {
+    .question-checkbox {
+        margin-left: 0;
+        margin-top: 0;
+        align-self: flex-start;
+        margin-bottom: 67px;
+    }
+
+    .question-input {
+        width: inherit;
+    }
+    .question-button {
+        align-self: flex-start;
+        width: 340px;
+    }
+    /*.question-form-info > .wrap-input {*/
+    /*}*/
+    .name-phone-container {
+        flex-direction: column;
+    }
+
+    .address {
+        width: inherit;
+        height: 71px;
+        font-size: 18px;
+        line-height: 138.6%;
+        margin: 42px 18px 23px;
+        white-space: nowrap;
+        order: 2;
+    }
+
+    .messengers {
+        order: 2;
+    }
+
+    .clients-comments-section, footer {
         display: none;
     }
 }
