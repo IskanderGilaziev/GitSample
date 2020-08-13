@@ -74,6 +74,10 @@ h1 {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1) inset;
 }
 
+.button:focus {
+    background: #eea126;
+}
+
 .header {
     font-size: 11px;
     line-height: 15px;
@@ -98,7 +102,7 @@ h1 {
     display: flex;
 }
 
-.header-navigation__item {
+.header-navigation__item, .telephone {
     margin-right: 47px;
     color: white;
     text-decoration: none;
@@ -138,7 +142,6 @@ h1 {
 .welcome-title {
     margin-top: 0;
     margin-bottom: 19px;
-    font-family: "YesevaOne", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -147,6 +150,12 @@ h1 {
     color: #FFFFFF;
     width: 676px;
     height: 105px;
+}
+
+.welcome-title, .slider-navigation, .slider-project-title,
+.param-name, .wildest-header, .client-name, .client-order-area,
+.client-order-days, .question-form-title, .address {
+    font-family: "YesevaOne", Arial, sans-serif;
 }
 
 .dark-theme {
@@ -160,8 +169,7 @@ h1 {
 }
 
 .welcome-text {
-    margin-top: 0;
-    margin-bottom: 41px;
+    margin: 0 0 41px;
     font-size: 22px;
     line-height: 36px;
     color: #FFFFFF;
@@ -175,6 +183,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF;
 }
+
 .welcome-submit:before {
     content: "SUBMIT YOUR APPLICATION";
 }
@@ -199,16 +208,17 @@ h1 {
     justify-content: space-between;
 }
 
-.slider-navigation {
-    font-family: "YesevaOne", Arial, sans-serif;
+.slider-navigation, .repair-clause-text {
     font-size: 14px;
     line-height: 19px;
+}
+
+.slider-navigation {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
     padding-top: 107px;
     margin: 0;
     list-style: none;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -221,8 +231,7 @@ h1 {
     text-decoration: none;
 }
 
-/*TODO!!!!!!!!!!!!!!! найти повторы и объединить*/
-.slider-navigation__item:hover {
+.slider-navigation__item:hover, .telephone:hover  {
     color: #E3B873;
     text-decoration: underline;
 }
@@ -234,14 +243,14 @@ h1 {
     background-image: url("../images/release_wildest/chairs.png");
 }
 
-
-
-.slider-project-title {
-    font-family: "YesevaOne", Arial, sans-serif;
+.slider-project-title, .wildest-header {
     font-size: 27px;
     line-height: 37px;
-    letter-spacing: -0.07em;
     text-transform: uppercase;
+}
+
+.slider-project-title {
+    letter-spacing: -0.07em;
     color: #E3B873;
 }
 
@@ -268,10 +277,13 @@ h1 {
     height: 50%;
 }
 
-.param-name {
-    font-family: "YesevaOne", Arial, sans-serif;
+.param-name, .repair-work-name,
+.repair-coast, .repair-clause-info__item {
     font-size: 18px;
     line-height: 25px;
+}
+
+.param-name {
     text-transform: uppercase;
     color: #E3B873;
 }
@@ -295,7 +307,12 @@ h1 {
 }
 
 input {
+    margin: 0;
     display: none;
+    border: none;
+    outline: none;
+    overflow: visible;
+    touch-action: manipulation;
 }
 
 input:checked + .radio, .radio:hover {
@@ -421,12 +438,20 @@ input:checked + .radio, .radio:hover {
     flex-direction: column;
 }
 
-.online-control-title {
-    font-family: "Yeseva One", Arial, sans-serif;
+.online-control-title, .type-repair-title,
+.question-form-title, .address {
     font-size: 20px;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.online-control-title, .type-repair-title,
+.repair-work-name, .repair-coast, .repair-clause-info__item {
+    font-family: "Yeseva One", Arial, sans-serif;
+}
+
+.online-control-title {
     margin: 0;
     padding-bottom: 13px;
     color: #FFFFFF;
@@ -457,12 +482,14 @@ input:checked + .radio, .radio:hover {
     justify-content: center;
     align-items: center;
 }
+
 iframe {
     width: 817px;
     height: 434px;
 }
 
-.camera-separator-line {
+.camera-video:after {
+    content: '';
     margin-top: 63px;
     width: 55px;
     height: 1px;
@@ -489,16 +516,7 @@ iframe {
     justify-content: center;
 }
 
-input {
-    margin: 0;
-    border: none;
-    outline: none;
-    overflow: visible;
-    touch-action: manipulation;
-}
-
 .wrap-input {
-    border-bottom: 2px solid #d9d9d9;
     position: relative;
     margin-right: 58px;
 }
@@ -512,12 +530,17 @@ input {
 }
 
 .input-text {
+    border-bottom: 2px solid #d9d9d9;
     font-size: 14px;
     line-height: 23px;
     color: #363636;
     display: block;
     width: 231px;
     background: transparent;
+}
+
+.input-text:focus {
+    border-bottom-color: #eea126;
 }
 
 .submit-info {
@@ -575,13 +598,7 @@ input {
 }
 
 .type-repair-title {
-    font-family: "Yeseva One", Arial, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
     color: #181818;
-
 }
 
 .wrap-repair-container {
@@ -624,9 +641,6 @@ input {
 }
 
 .repair-work-name {
-    font-family: "Yeseva One", Arial, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
     color: #363636;
     margin: 25px 0 13px 34px;
 }
@@ -645,11 +659,8 @@ input {
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
     position: absolute;
-    font-family: "Yeseva One", Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
-    line-height: 25px;
     color: #FFFFFF;
     bottom: 0;
     margin: 0 31px 0;
@@ -686,20 +697,14 @@ input {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-
-    font-size: 18px;
-    line-height: 25px;
     text-align: center;
     color: #FFFFFF;
-    font-family: "Yeseva One", Arial, sans-serif;
     padding: 10px;
 }
 
 .repair-clause-text {
     margin: 0;
     padding: 17px;
-    font-size: 14px;
-    line-height: 19px;
     color: #363636;
 }
 
@@ -799,6 +804,7 @@ input {
     height: 47px;
     margin-right: 135px;
 }
+
 /*=====================================================*/
 /*section wildest-fantasy*/
 
@@ -822,14 +828,10 @@ input {
     padding: 120px 0 0 55px;
     display: block;
 }
-/*TODO повтор slider-project*/
+
 .wildest-header {
     margin: 0;
     padding-left: 40px;
-    font-family: "YesevaOne", Arial, sans-serif;
-    font-size: 27px;
-    line-height: 37px;
-    text-transform: uppercase;
     color: #E3B873;
 }
 
@@ -858,6 +860,7 @@ input {
     display: flex;
     right: 102px;
 }
+
 .wildest-image-container > .slider-radio {
     display: none;
 }
@@ -866,7 +869,7 @@ input {
     margin-bottom: 40px;
 }
 
-.wildest-image-block_1{
+.wildest-image-block_1 {
     margin-top: -41px;
 }
 
@@ -875,10 +878,11 @@ input {
 }
 
 .wildest-image-block_1,
-.wildest-image-block_2{
+.wildest-image-block_2 {
     width: 354px;
     margin-left: 43px;
 }
+
 /*=====================================================*/
 /*section clients-comments*/
 
@@ -889,6 +893,7 @@ input {
     background-position: bottom;
     background-repeat: repeat-x;
 }
+
 .clients-container {
     margin-top: 110px;
     display: flex;
@@ -897,7 +902,6 @@ input {
     align-items: center;
 }
 
-/*TODO копия camera-text */
 .clients-text {
     margin: 0;
     font-size: 18px;
@@ -930,6 +934,7 @@ input {
     width: 80px;
     height: 80px;
 }
+
 .wrap-client-info {
     display: flex;
     justify-content: flex-start;
@@ -938,7 +943,6 @@ input {
 }
 
 .client-name {
-    font-family: "YesevaOne", Arial, sans-serif;
     font-size: 18px;
     line-height: 23px;
     color: #181818;
@@ -969,7 +973,6 @@ input {
 .client-order-area, .client-order-days {
     margin: 0;
     position: relative;
-    font-family: "YesevaOne", Arial, sans-serif;
     font-size: 17px;
     line-height: 24px;
     text-transform: uppercase;
@@ -1007,7 +1010,6 @@ input {
     margin: 0;
 }
 
-/*TODO copy .repair-form*/
 .wrap-question-form {
     width: 883px;
     height: 446px;
@@ -1018,8 +1020,6 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /*position: relative;*/
 }
 
 .question-container {
@@ -1043,16 +1043,8 @@ input {
 }
 
 .question-form-title {
-    font-family: "YesevaOne", Arial, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
     color: #FFFFFF;
-
 }
-
-/*TODO! copy .repair-form-info {*/
 
 .question-form-info {
     display: flex;
@@ -1071,7 +1063,6 @@ input {
     margin-bottom: 49px;
 }
 
-/* TODO copy .submit-repair-info {*/
 .question-button {
     font-style: normal;
     font-size: 13px;
@@ -1080,7 +1071,6 @@ input {
     padding: 13px 80px;
 }
 
-/*TODO copy .repair-checkbox */
 .question-checkbox {
     align-self: center;
     margin: 0 0 39px 49px;
@@ -1088,20 +1078,16 @@ input {
 }
 
 .address {
-    font-family: "YesevaOne", Arial, sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
     width: 589px;
     height: 51px;
     margin: 52px 0 26px 0;
     position: relative;
 }
 
-.messengers{
+.messengers {
     padding: 0 0 43px 0;
 }
+
 .messengers_item {
     padding-right: 15px;;
 }
@@ -1123,7 +1109,7 @@ footer {
         display: none;
     }
 
-    .header-navigation__item:last-child {
+    .telephone {
         display: flex;
     }
 
@@ -1135,7 +1121,8 @@ footer {
         height: 57px;
         justify-content: space-around;
     }
-    .logo{
+
+    .logo {
         margin-left: 18px;
     }
 
@@ -1143,9 +1130,9 @@ footer {
         max-width: inherit;
         min-width: inherit;
     }
+
     /*=====================================================*/
     /*section welcome*/
-
     .welcome {
         background-position: center;
         height: 476px;
@@ -1154,7 +1141,6 @@ footer {
 
     .welcome-content {
         padding: 85px 0 0;
-        /*width: 339px;*/
         width: inherit;
     }
 
@@ -1186,15 +1172,17 @@ footer {
     .calculate-submit {
         margin-bottom: 26px;
     }
+
     /*=====================================================*/
     /*section slider*/
-
     .slider {
         height: 727px;
     }
+
     .slider-navigation {
         display: none;
     }
+
     .wrap-slider-content {
         flex-direction: column;
         justify-content: center;
@@ -1227,15 +1215,18 @@ footer {
         order: 3;
         align-self: center;
     }
+
     .slider-content {
         display: flex;
         flex-direction: column;
         align-self: center;
         justify-content: center;
     }
+
     .slider-image {
         display: none;
     }
+
     .slider-radio {
         background-image: url("../images/cabinet.png");
         width: 340px;
@@ -1250,7 +1241,6 @@ footer {
         background: #E3B873;
         box-shadow: 0 10px 20px rgba(237, 192, 120, 0.2);
         border-radius: 50%;
-        /*width: 40px;*/
         height: 40px;
         margin: 0 14px 0;
     }
@@ -1263,9 +1253,11 @@ footer {
     .arrow-right:after, .arrow-right:before {
         right: 15px;
     }
+
     .arrow-left:after, .arrow-left:before {
         left: 15px;
     }
+
     .arrow-right:after {
         transform: rotate(35deg);
     }
@@ -1273,6 +1265,7 @@ footer {
     .arrow-right:before {
         transform: rotate(-35deg);
     }
+
     .arrow-left:after {
         transform: rotate(145deg);
     }
@@ -1322,7 +1315,7 @@ footer {
         height: 207px;
     }
 
-    .camera-separator-line {
+    .camera-video:after {
         margin: 28px 0 22px;
     }
 
@@ -1376,6 +1369,7 @@ footer {
         margin-top: 27px;
         margin-bottom: 80px;
     }
+
     .submit-info {
         position: absolute;
         bottom: 0;
@@ -1407,6 +1401,7 @@ footer {
     .wrap-repair-info {
         padding-bottom: 178px;
     }
+
     .wrap-repair-info:nth-of-type(1) > .repair-room-img {
         content: url("../images/mobile_img/empty_room_mobile.png");
     }
@@ -1418,18 +1413,22 @@ footer {
     .wrap-repair-info:nth-of-type(3) > .repair-room-img {
         content: url("../images/mobile_img/kitchen_mobile.png");
     }
+
     .repair-room-img {
         margin: 0 18px 0;
     }
+
     .repair-info {
         margin: 223px 0 0 0;
         width: 270px;
         height: 241px;
     }
+
     .repair-work-name {
         font-size: 15px;
         line-height: 138.6%;
     }
+
     .repair-options {
         line-height: 169.8%;
         /* or 22px */
@@ -1452,9 +1451,11 @@ footer {
         height: 445px;
         z-index: 2;
     }
+
     .wildest-fantasies > .dark-theme {
         display: none;
     }
+
     .wildest-header {
         font-size: 22px;
         line-height: 138.6%;
@@ -1466,12 +1467,14 @@ footer {
         justify-content: center;
     }
 
-    .wildest-info, .wildest-image-block_1, .wildest-image-block_2{
+    .wildest-info, .wildest-image-block_1, .wildest-image-block_2 {
         display: none;
     }
+
     .wildest-container {
         flex-direction: column;
     }
+
     .wildest-image-container {
         right: 0;
         margin: 24px 0 0 0;
@@ -1488,7 +1491,6 @@ footer {
     /*=====================================================*/
     /*section shop-position*/
     .shop-position {
-        /*margin-top: 250px;*/
         background-image: none;
         background-color: black;
         height: 750px;
@@ -1499,14 +1501,17 @@ footer {
         margin-bottom: 100px;
         width: 90vw;
     }
+
     .question-container {
         background-color: #131313;
     }
+
     .question-form {
         width: inherit;
         margin: 52px 18px 0 18px;
     }
-    .name-phone-container > .wrap-input:first-child{
+
+    .name-phone-container > .wrap-input:first-child {
         margin-bottom: 49px;
     }
 
@@ -1520,12 +1525,12 @@ footer {
     .question-input {
         width: inherit;
     }
+
     .question-button {
         align-self: flex-start;
         width: 90vw;
     }
-    /*.question-form-info > .wrap-input {*/
-    /*}*/
+
     .name-phone-container {
         flex-direction: column;
     }
@@ -1548,13 +1553,16 @@ footer {
         display: none;
     }
 }
+
 @media only screen and (max-width: 320px) {
     .arrow {
         height: 30px;
     }
+
     .arrow:after, .arrow:before {
         margin-top: 14px;
     }
+
     .arrow-left:after, .arrow-left:before {
         left: 10px;
     }
@@ -1562,20 +1570,22 @@ footer {
     .arrow-right:after, .arrow-right:before {
         right: 10px;
     }
+
     .slider-radio {
         width: 90vw;
     }
+
     .wildest-image-container > .slider-radio {
         width: 90vw;
     }
 }
 
 
-
-@media only screen and (min-width: 480px) and (max-width: 850px){
+@media only screen and (min-width: 480px) and (max-width: 850px) {
     .button {
         width: 45vw;
     }
+
     .welcome-title, .button, .welcome-text {
         margin-left: calc(25%);
     }
